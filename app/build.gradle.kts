@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.jailton.apptemplateproject"
+    namespace = "com.osieljunior.bdatividade1907"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.jailton.apptemplateproject"
+        applicationId = "com.osieljunior.bdatividade1907"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
