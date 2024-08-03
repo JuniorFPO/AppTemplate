@@ -35,6 +35,7 @@ class StoreFragment : Fragment() {
     private lateinit var storeImageView: ImageView
     private lateinit var storeNameEditText: EditText
     private lateinit var storeEmailEditText: EditText
+    private lateinit var storeEnderecoEditText: EditText
     private lateinit var selectImageButton: Button
     private lateinit var registerStoreButton: Button
     private var imageUri: Uri? = null
@@ -61,6 +62,7 @@ class StoreFragment : Fragment() {
         storeImageView = view.findViewById(R.id.image_store)
         storeNameEditText = view.findViewById(R.id.edit_text_store_name)
         storeEmailEditText = view.findViewById(R.id.edit_text_store_email)
+        storeEnderecoEditText = view.findViewById(R.id.edit_text_store_endereco)
         selectImageButton = view.findViewById(R.id.button_select_image)
         registerStoreButton = view.findViewById(R.id.button_register_store)
 
@@ -129,14 +131,15 @@ class StoreFragment : Fragment() {
     private fun registerStore(imageUrl: String) {
         val name = storeNameEditText.text.toString()
         val email = storeEmailEditText.text.toString()
+        val endereco = storeEnderecoEditText.text.toString()
 
-        if (name.isEmpty() || email.isEmpty()) {
+        if (name.isEmpty() || email.isEmpty() || endereco.isEmpty()) {
             Toast.makeText(context, "Por favor, preencha todos os campos", Toast.LENGTH_SHORT)
                 .show()
             return
         }
         var user = MainActivity.usuarioLogado
-        val store = Item(name, email, imageUrl, user?.uid.toString())
+        val store = Item("", name, email, imageUrl, endereco, user?.uid.toString(),"","", "")
 
         val database: FirebaseDatabase =
             FirebaseDatabase.getInstance("https://apptemplate-35820-default-rtdb.firebaseio.com/")

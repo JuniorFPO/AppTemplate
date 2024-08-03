@@ -4,6 +4,9 @@ firebaseAuthKtxVersion = "23.0.0"
 firebaseBom = "33.1.2"
 firebaseBomVersion = "33.1.2"
 glide = "4.16.0"
+googleAuthLibraryOauth2Http = "1.0.0"
+googleAuthLibraryOauth2HttpVersion = "1.2.1"
+googleCloudBigquery = "2.3.3"
 googleServices = "4.4.2"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
@@ -24,6 +27,8 @@ annotation = "1.8.0"
 playServicesAuth = "21.2.0"
 playServicesAuthVersion = "21.2.0"
 firebaseMessagingKtx = "24.0.0"
+playServicesLocation = "21.3.0"
+playServicesMaps = "19.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -34,6 +39,9 @@ firebase-bom-v3280 = { module = "com.google.firebase:firebase-bom", version.ref 
 firebase-database = { module = "com.google.firebase:firebase-database", version.ref = "firebaseStorageKtx" }
 firebase-messaging = { module = "com.google.firebase:firebase-messaging", version.ref = "firebaseAuthKtxVersion" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+google-auth-library-oauth2-http = { module = "com.google.auth:google-auth-library-oauth2-http", version.ref = "googleAuthLibraryOauth2Http" }
+google-auth-library-oauth2-http-v121 = { module = "com.google.auth:google-auth-library-oauth2-http", version.ref = "googleAuthLibraryOauth2HttpVersion" }
+google-cloud-bigquery = { module = "com.google.cloud:google-cloud-bigquery", version.ref = "googleCloudBigquery" }
 google-services = { module = "com.google.gms:google-services", version.ref = "googleServices" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -52,6 +60,8 @@ androidx-annotation = { group = "androidx.annotation", name = "annotation", vers
 play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
 play-services-auth-v2050 = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuthVersion" }
 firebase-messaging-ktx = { group = "com.google.firebase", name = "firebase-messaging-ktx", version.ref = "firebaseMessagingKtx" }
+play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
+play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
