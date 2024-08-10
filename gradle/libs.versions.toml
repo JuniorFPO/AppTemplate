@@ -7,6 +7,7 @@ glide = "4.16.0"
 googleAuthLibraryOauth2Http = "1.0.0"
 googleAuthLibraryOauth2HttpVersion = "1.2.1"
 googleCloudBigquery = "2.3.3"
+googlePlayServicesAuth = "20.7.0"
 googleServices = "4.4.2"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
@@ -60,6 +61,7 @@ androidx-annotation = { group = "androidx.annotation", name = "annotation", vers
 play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
 play-services-auth-v2050 = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuthVersion" }
 firebase-messaging-ktx = { group = "com.google.firebase", name = "firebase-messaging-ktx", version.ref = "firebaseMessagingKtx" }
+play-services-auth-v2070 = { module = "com.google.android.gms:play-services-auth", version.ref = "googlePlayServicesAuth" }
 play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
 play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
 

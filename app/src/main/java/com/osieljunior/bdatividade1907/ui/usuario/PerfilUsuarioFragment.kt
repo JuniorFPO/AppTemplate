@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.UserProfileChangeRequest
@@ -21,6 +23,7 @@ class PerfilUsuarioFragment : Fragment() {
 
     private var _binding: FragmentPerfilUsuarioBinding? = null
 
+    private lateinit var userProfileImageView: ImageView
     private lateinit var registerNameEditText: EditText
     private lateinit var registerEmailEditText: EditText
     private lateinit var registerPasswordEditText: EditText
@@ -44,6 +47,7 @@ class PerfilUsuarioFragment : Fragment() {
         // Inicializa o Firebase Auth
         auth = FirebaseAuth.getInstance()
 
+        userProfileImageView = view.findViewById(R.id.userProfileImageView)
         registerNameEditText = view.findViewById(R.id.registerNameEditText)
         registerEmailEditText = view.findViewById(R.id.registerEmailEditText)
         registerPasswordEditText = view.findViewById(R.id.registerPasswordEditText)
@@ -59,6 +63,11 @@ class PerfilUsuarioFragment : Fragment() {
             registerPasswordEditText.visibility = View.GONE
             registerConfirmPasswordEditText.visibility = View.GONE
             registerEmailEditText.isEnabled = false
+        }
+
+        user?.let {
+            // Exibe a foto do perfil usando a biblioteca Glide
+            Glide.with(this).load(it.photoUrl).into(userProfileImageView)
         }
 
         registerButton.setOnClickListener {
